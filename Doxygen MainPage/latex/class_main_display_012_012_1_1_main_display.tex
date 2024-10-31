@@ -1,0 +1,80 @@
+\doxysection{Main\+Display 2 2.Main\+Display Class Reference}
+\hypertarget{class_main_display_012_012_1_1_main_display}{}\label{class_main_display_012_012_1_1_main_display}\index{MainDisplay 2 2.MainDisplay@{MainDisplay 2 2.MainDisplay}}
+
+
+This class represents the main display functionality for projecting images.  
+
+
+Inheritance diagram for Main\+Display 2 2.Main\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_display_012_012_1_1_main_display}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_display_012_012_1_1_main_display_a26ad8764a298ae8f656caa5532c88dd3}\label{class_main_display_012_012_1_1_main_display_a26ad8764a298ae8f656caa5532c88dd3} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Initializes the Main\+Display with default values. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_display_012_012_1_1_main_display_a8ba686b355a7783e3d4ac2acc06e29b1}\label{class_main_display_012_012_1_1_main_display_a8ba686b355a7783e3d4ac2acc06e29b1} 
+{\bfseries load\+Images} (self, image\+\_\+path)
+\item 
+\mbox{\hyperlink{class_main_display_012_012_1_1_main_display_a7a2661f9a57643299bd5e37e04ce7d08}{initialize\+Image}} (self, image)
+\begin{DoxyCompactList}\small\item\em Initializes the result image to be processed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_display_012_012_1_1_main_display_a06be11f36575cd5338225e5cb44beea5}{save\+Image}} (self, image, image\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Save the processed result image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_display_012_012_1_1_main_display_a5bfe22a1155bc461e732860ce86b3a6d}\label{class_main_display_012_012_1_1_main_display_a5bfe22a1155bc461e732860ce86b3a6d} 
+{\bfseries result\+\_\+image}
+\begin{DoxyCompactList}\small\item\em This variable wil store the image that will be displayed in the main.\+py file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the main display functionality for projecting images. 
+
+It uses cv2 library to read and load images 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_display_012_012_1_1_main_display_a7a2661f9a57643299bd5e37e04ce7d08}\label{class_main_display_012_012_1_1_main_display_a7a2661f9a57643299bd5e37e04ce7d08} 
+\index{MainDisplay 2 2.MainDisplay@{MainDisplay 2 2.MainDisplay}!initializeImage@{initializeImage}}
+\index{initializeImage@{initializeImage}!MainDisplay 2 2.MainDisplay@{MainDisplay 2 2.MainDisplay}}
+\doxysubsubsection{\texorpdfstring{initializeImage()}{initializeImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_main_display_012_012_1_1_main_display}{Main\+Display}} 2 2.Main\+Display.\+initialize\+Image (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image }\end{DoxyParamCaption})}
+
+
+
+Initializes the result image to be processed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image} & is the loaded image which can get from load\+Images method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set and return a copy of the image as result\+\_\+image. 
+\end{DoxyReturn}
+\Hypertarget{class_main_display_012_012_1_1_main_display_a06be11f36575cd5338225e5cb44beea5}\label{class_main_display_012_012_1_1_main_display_a06be11f36575cd5338225e5cb44beea5} 
+\index{MainDisplay 2 2.MainDisplay@{MainDisplay 2 2.MainDisplay}!saveImage@{saveImage}}
+\index{saveImage@{saveImage}!MainDisplay 2 2.MainDisplay@{MainDisplay 2 2.MainDisplay}}
+\doxysubsubsection{\texorpdfstring{saveImage()}{saveImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_main_display_012_012_1_1_main_display}{Main\+Display}} 2 2.Main\+Display.\+save\+Image (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image,  }\item[{}]{image\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Save the processed result image. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image} & is the loaded image which can get from load\+Images method. \\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+name} & is the name of the image file which is saved by the method. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Main\+Display 2 2.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\doxysection{Config\+Reader\+\_\+\+Doxygen copy.\+Config\+Reader Class Reference}
+\hypertarget{class_config_reader___doxygen_01copy_1_1_config_reader}{}\label{class_config_reader___doxygen_01copy_1_1_config_reader}\index{ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}}
+
+
+This class reads necessary configuration values for image processing from the config file It uses configparser library to read configuration values.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_config_reader_a9e71535423ea20ad1997ae6ccc131029}\label{class_config_reader___doxygen_01copy_1_1_config_reader_a9e71535423ea20ad1997ae6ccc131029} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, config\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Constructor reads and initializes the config file for other functions in the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_config_reader_a51e34fa6a9669700042909c311778c1f}{get\+Image\+Name}} (self)
+\begin{DoxyCompactList}\small\item\em This function extracts image name from the config file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_config_reader_aad6d6d59fbbd986002d0fa1ee9f669db}{get\+Projected\+Image\+Width}} (self)
+\begin{DoxyCompactList}\small\item\em This function extracts image width from the config file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_config_reader_a2f6db200a6129fae4ee0f39cb847a9e2}{get\+Projected\+Overlap\+Width}} (self)
+\begin{DoxyCompactList}\small\item\em This function extracts image overlap width from the config file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_config_reader_a68add15825c3ddcec9c34fb21e81942b}{get\+Gamma}} (self)
+\begin{DoxyCompactList}\small\item\em This function extracts the gamma value from the config file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_config_reader_a1575e40bea1d24dd053cb9dfe15db9ab}{get\+Side}} (self)
+\begin{DoxyCompactList}\small\item\em This function extracts the projected image side value from the config file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class reads necessary configuration values for image processing from the config file It uses configparser library to read configuration values. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_config_reader_a68add15825c3ddcec9c34fb21e81942b}\label{class_config_reader___doxygen_01copy_1_1_config_reader_a68add15825c3ddcec9c34fb21e81942b} 
+\index{ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}!getGamma@{getGamma}}
+\index{getGamma@{getGamma}!ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getGamma()}{getGamma()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Config\+Reader.\+get\+Gamma (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function extracts the gamma value from the config file. 
+
+\begin{DoxyReturn}{Returns}
+Gamma value as float value 
+\end{DoxyReturn}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_config_reader_a51e34fa6a9669700042909c311778c1f}\label{class_config_reader___doxygen_01copy_1_1_config_reader_a51e34fa6a9669700042909c311778c1f} 
+\index{ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}!getImageName@{getImageName}}
+\index{getImageName@{getImageName}!ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getImageName()}{getImageName()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Config\+Reader.\+get\+Image\+Name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function extracts image name from the config file. 
+
+\begin{DoxyReturn}{Returns}
+Image name as String value 
+\end{DoxyReturn}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_config_reader_aad6d6d59fbbd986002d0fa1ee9f669db}\label{class_config_reader___doxygen_01copy_1_1_config_reader_aad6d6d59fbbd986002d0fa1ee9f669db} 
+\index{ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}!getProjectedImageWidth@{getProjectedImageWidth}}
+\index{getProjectedImageWidth@{getProjectedImageWidth}!ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getProjectedImageWidth()}{getProjectedImageWidth()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Config\+Reader.\+get\+Projected\+Image\+Width (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function extracts image width from the config file. 
+
+\begin{DoxyReturn}{Returns}
+Image width as int 
+\end{DoxyReturn}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_config_reader_a2f6db200a6129fae4ee0f39cb847a9e2}\label{class_config_reader___doxygen_01copy_1_1_config_reader_a2f6db200a6129fae4ee0f39cb847a9e2} 
+\index{ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}!getProjectedOverlapWidth@{getProjectedOverlapWidth}}
+\index{getProjectedOverlapWidth@{getProjectedOverlapWidth}!ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getProjectedOverlapWidth()}{getProjectedOverlapWidth()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Config\+Reader.\+get\+Projected\+Overlap\+Width (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function extracts image overlap width from the config file. 
+
+\begin{DoxyReturn}{Returns}
+Image overlap width as integer value 
+\end{DoxyReturn}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_config_reader_a1575e40bea1d24dd053cb9dfe15db9ab}\label{class_config_reader___doxygen_01copy_1_1_config_reader_a1575e40bea1d24dd053cb9dfe15db9ab} 
+\index{ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}!getSide@{getSide}}
+\index{getSide@{getSide}!ConfigReader\_Doxygen copy.ConfigReader@{ConfigReader\_Doxygen copy.ConfigReader}}
+\doxysubsubsection{\texorpdfstring{getSide()}{getSide()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Config\+Reader.\+get\+Side (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This function extracts the projected image side value from the config file. 
+
+\begin{DoxyReturn}{Returns}
+Side as integer value
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If returned value is 0, image is the left image. If returned value is 1, image is the right image. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Config\+Reader\+\_\+\+Doxygen copy.\+py\end{DoxyCompactItemize}

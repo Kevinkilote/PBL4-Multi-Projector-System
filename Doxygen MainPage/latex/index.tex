@@ -1,0 +1,181 @@
+\chapter{Project Documentation}
+\hypertarget{index}{}\label{index}\index{Project Documentation@{Project Documentation}}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+ \doxysection*{1. About project\+:}
+
+ \doxysubsection*{In this project, our aim is to implement advanced image synthesis technology by integrating the output of two projectors at different angles to display a large, seamless and continuous image on a flat screen. Various computer graphics techniques, such as alpha blending and gamma correction, are used to seamlessly blend the two projected images.}
+
+    \\\cline{1-1}
+\end{longtabu}
+
+
+\doxysection*{2. Projection setup\+:}
+
+          
+
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+ \doxysubsubsection*{The following configuration defines the spatial arrangement and dimensions for the projection setup, providing the necessary measurements to ensure the correct positioning and alignment of the screens and projectors.}
+
+    \\\cline{1-1}
+\end{longtabu}
+
+
+  
+
+{\bfseries{Projection Setup Configuration}}\begin{adjustwidth}{1em}{0em}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+Width of Screens 1 and 2 (w1, w2)\+: &95 centimeters  \\\cline{1-2}
+Distance between Projectors and Screen (d)\+: &1.\+5 meters  \\\cline{1-2}
+Overlap Calculation\+: &20 centimeters  \\\cline{1-2}
+Vertical Length of Screens\+: &60 centimeters  \\\cline{1-2}
+The total screen width is\+: &1.\+7 meters  \\\cline{1-2}
+\end{longtabu}
+\end{adjustwidth}
+  
+
+\doxysection*{3. Formulas\+:}
+
+  \doxysubsection*{Mask Creation}
+
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+{\bfseries{Description\+:}}  &Mask creation is a fundamental process within image synthesis technology, primarily used to generate a mask that defines the shape and transparency of the projected images. This crucial mask controls the blending and presentation of images on a flat screen, ensuring a seamless and continuous display.
+
+\\\cline{1-2}
+{\bfseries{Formula\+:}}  &
+
+\[ MS = \frac{OW}{IW}\cdot IS\]
+
+
+
+\\\cline{1-2}
+\end{longtabu}
+
+
+{\bfseries{Mask Variables}}\begin{adjustwidth}{1em}{0em}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+Mask shape\+: &MS  \\\cline{1-2}
+Overlap width\+: &OW  \\\cline{1-2}
+Image width\+: &IW  \\\cline{1-2}
+Image shape\+: &IS  \\\cline{1-2}
+\end{longtabu}
+\end{adjustwidth}
+
+
+  \doxysubsection*{Gamma correction}
+
+
+
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+{\bfseries{Description\+:}}  &Gamma Correction is a method used to adjust the brightness and contrast of an image. It involves manipulating the pixel values to achieve a more visually optimized image by altering its luminance and color distribution.   \\\cline{1-2}
+{\bfseries{Formula\+:}}  &
+
+\[ CP = \left(\frac{OP}{255}\right)^{\gamma} \cdot 255 \]
+
+
+
+\\\cline{1-2}
+\end{longtabu}
+ 
+
+{\bfseries{Gamma Correction Variables}}\begin{adjustwidth}{1em}{0em}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+Corrected Pixel\+: &CP  \\\cline{1-2}
+Original Pixel\+: &OP  \\\cline{1-2}
+Gamma\+: &\[{\gamma}\]  \\\cline{1-2}
+\end{longtabu}
+\end{adjustwidth}
+ 
+
+\doxysubsection*{Alpha blending}
+
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+{\bfseries{Description\+:}}  &The Alpha Blending technique, implemented in the code, is used to combine two images, typically from different sources or angles, in a smooth and gradual manner. It involves the manipulation of transparency levels for each pixel in the images to create a seamless transition effect when overlaying one image over another.   \\\cline{1-2}
+{\bfseries{Formula\+:}}  &
+
+For left\+: \[  R = (1 - \alpha) \cdot CL + \alpha \cdot RL \] For right\+: \[  R = CR + \alpha \cdot RR \cdot (1 - \alpha)  \]
+
+
+
+\\\cline{1-2}
+\end{longtabu}
+
+
+{\bfseries{Alpha blending variables}}\begin{adjustwidth}{1em}{0em}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+Result\+: &R  \\\cline{1-2}
+Gamma Corrected Left\+: &CL  \\\cline{1-2}
+Result Left Image\+: &RL  \\\cline{1-2}
+Gamma Corrected Right\+: &CR  \\\cline{1-2}
+Result Right Image\+: &RR  \\\cline{1-2}
+\end{longtabu}
+\end{adjustwidth}
+
+
+ 
+
+\doxysubsection*{Intensity modifier}
+
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+{\bfseries{Description\+:}}  &The Intensity Modifier plays a critical role in creating smooth transitions and blending effects in the final image, ensuring that the overlay of two images appears seamless and visually pleasing. It controls the pixel intensity based on the image side and position within the mask.   \\\cline{1-2}
+{\bfseries{Formula\+:}}  &
+
+For left\+: \[  IF = 1.0 - \frac{mask - col}{mask} \] For right\+: \[  IF = 1.0 - \frac{col}{mask} \]
+
+
+
+\\\cline{1-2}
+\end{longtabu}
+
+
+{\bfseries{Alpha blending variables}}\begin{adjustwidth}{1em}{0em}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+Intensity factor &IF  \\\cline{1-2}
+Image shape &col  \\\cline{1-2}
+Mask shape &mask  \\\cline{1-2}
+\end{longtabu}
+\end{adjustwidth}
+
+
+
+
+
+
+
+
+\doxysection*{4. Results\+:}
+
+\doxysubsection*{Step 1\+: Image masking and stitching}
+
+          
+
+\doxysubsection*{Step 2\+: Gamma correction}
+
+          
+
+\doxysubsection*{Final Step\+: Alpha blending and intensity modifier}
+
+        

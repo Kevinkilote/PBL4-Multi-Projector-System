@@ -1,0 +1,97 @@
+\doxysection{Config\+Reader\+\_\+\+Doxygen copy.\+Mask\+Creator Class Reference}
+\hypertarget{class_config_reader___doxygen_01copy_1_1_mask_creator}{}\label{class_config_reader___doxygen_01copy_1_1_mask_creator}\index{ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}}
+
+
+This class handles the image processing functions for modyfing projected images.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_mask_creator_af49d0803d27def43dd5de5840f64b7a2}\label{class_config_reader___doxygen_01copy_1_1_mask_creator_af49d0803d27def43dd5de5840f64b7a2} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, image)
+\begin{DoxyCompactList}\small\item\em Constructor initializes values necessary for the image processing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_mask_creator_aaf02aeca3c69cfbbec4e4f0780189a83}{create\+Mask}} (self, image\+\_\+side, mask\+\_\+width, image\+\_\+width)
+\begin{DoxyCompactList}\small\item\em This function creates the masked region and applies alpha gradient to it depending on the projected side of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_mask_creator_aebaa3985879020425f3602e49cee47ad}{gamma\+Correction}} (self, gamma)
+\begin{DoxyCompactList}\small\item\em This function applies gamma correction to the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_mask_creator_aa9865143a335631d187d36d7f01fe744}{alpha\+Blending}} (self, image\+\_\+side)
+\begin{DoxyCompactList}\small\item\em The function modifies the {\ttfamily result\+\_\+image} attribute of the class by blending it with the gamma corrected image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_config_reader___doxygen_01copy_1_1_mask_creator_a266853b23ee44c561700f14f627f05ae}{modify\+Intensity}} (self, image\+\_\+side)
+\begin{DoxyCompactList}\small\item\em @briefs This function modifies the intensity of the image stored in {\ttfamily self.\+result\+\_\+image} based on the {\ttfamily image\+\_\+side} parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_mask_creator_a5d71e71a4cfa602b1b90435518c435b3}\label{class_config_reader___doxygen_01copy_1_1_mask_creator_a5d71e71a4cfa602b1b90435518c435b3} 
+{\bfseries result\+\_\+image}
+\begin{DoxyCompactList}\small\item\em This is the only public attribute in the class as it recieves non-\/masked image that gets overlayed with the masked region to create result image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles the image processing functions for modyfing projected images. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_mask_creator_aa9865143a335631d187d36d7f01fe744}\label{class_config_reader___doxygen_01copy_1_1_mask_creator_aa9865143a335631d187d36d7f01fe744} 
+\index{ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}!alphaBlending@{alphaBlending}}
+\index{alphaBlending@{alphaBlending}!ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{alphaBlending()}{alphaBlending()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Mask\+Creator.\+alpha\+Blending (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image\+\_\+side }\end{DoxyParamCaption})}
+
+
+
+The function modifies the {\ttfamily result\+\_\+image} attribute of the class by blending it with the gamma corrected image. 
+
+The blending is done column by column, and the degree of blending is determined by the alpha gradient.
+
+\begin{DoxyReturn}{Returns}
+the gamma of true or false
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If {\ttfamily image\+\_\+side} is 1, the blending is applied from left to right. If {\ttfamily image\+\_\+side} is 0, the blending is applied from right to left. 
+\end{DoxyNote}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_mask_creator_aaf02aeca3c69cfbbec4e4f0780189a83}\label{class_config_reader___doxygen_01copy_1_1_mask_creator_aaf02aeca3c69cfbbec4e4f0780189a83} 
+\index{ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}!createMask@{createMask}}
+\index{createMask@{createMask}!ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{createMask()}{createMask()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Mask\+Creator.\+create\+Mask (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image\+\_\+side,  }\item[{}]{mask\+\_\+width,  }\item[{}]{image\+\_\+width }\end{DoxyParamCaption})}
+
+
+
+This function creates the masked region and applies alpha gradient to it depending on the projected side of the image. 
+
+\begin{DoxyNote}{Note}
+Masked region represents projected overlap region of the projected images 
+\end{DoxyNote}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_mask_creator_aebaa3985879020425f3602e49cee47ad}\label{class_config_reader___doxygen_01copy_1_1_mask_creator_aebaa3985879020425f3602e49cee47ad} 
+\index{ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}!gammaCorrection@{gammaCorrection}}
+\index{gammaCorrection@{gammaCorrection}!ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{gammaCorrection()}{gammaCorrection()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Mask\+Creator.\+gamma\+Correction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{gamma }\end{DoxyParamCaption})}
+
+
+
+This function applies gamma correction to the image. 
+
+\begin{DoxyWarning}{Warning}
+all input must be positive 
+\end{DoxyWarning}
+\Hypertarget{class_config_reader___doxygen_01copy_1_1_mask_creator_a266853b23ee44c561700f14f627f05ae}\label{class_config_reader___doxygen_01copy_1_1_mask_creator_a266853b23ee44c561700f14f627f05ae} 
+\index{ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}!modifyIntensity@{modifyIntensity}}
+\index{modifyIntensity@{modifyIntensity}!ConfigReader\_Doxygen copy.MaskCreator@{ConfigReader\_Doxygen copy.MaskCreator}}
+\doxysubsubsection{\texorpdfstring{modifyIntensity()}{modifyIntensity()}}
+{\footnotesize\ttfamily Config\+Reader\+\_\+\+Doxygen copy.\+Mask\+Creator.\+modify\+Intensity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image\+\_\+side }\end{DoxyParamCaption})}
+
+
+
+@briefs This function modifies the intensity of the image stored in {\ttfamily self.\+result\+\_\+image} based on the {\ttfamily image\+\_\+side} parameter. 
+
+The intensity modification is performed column by column, starting from the edge and moving towards the center of the image. The intensity of each pixel in the column is multiplied by an {\ttfamily intensity\+\_\+factor} which decreases linearly from 1 to 0 over the range of {\ttfamily self.\+\_\+\+\_\+mask}.
+
+\begin{DoxyNote}{Note}
+If {\ttfamily image\+\_\+side} is 1, the function modifies the intensity of the left side of the image. If {\ttfamily image\+\_\+side} is 0, the function modifies the intensity of the right side of the image. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Config\+Reader\+\_\+\+Doxygen copy.\+py\end{DoxyCompactItemize}

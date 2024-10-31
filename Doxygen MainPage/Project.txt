@@ -1,0 +1,297 @@
+/*!
+ \mainpage Project Documentation
+<table>
+  <tr>
+    <td style="background-color: #D3D3D480; border:none;">
+      <div>
+        <h1>1. About project:</h1>
+   <h2 style="font-weight: normal; font-size: 1.5em; padding-left: 30px;">In this project, our aim is to implement advanced image synthesis technology by integrating the output of two projectors at different angles to display a large, seamless and continuous image on a flat screen. Various computer graphics techniques, such as alpha blending and gamma correction, are used to seamlessly blend the two projected images.</h2>
+      </div>
+    </td>
+  </tr>
+</table>
+
+   
+
+ </div>
+<h1>2. Projection setup:</h1>
+ <div class="images-container" style="display: flex;">
+   <div class="image-container" style="flex: 1;">
+     <img src="projectionAperture.png" alt="Projection aperture" style="width: 80%;">
+   </div>
+   <div class="image-container" style="flex: 1;">
+     <img src="Overlap.jpg" alt="Projection overlap" style="width: 80%;">
+   </div>
+   <div class="image-container" style="flex: 1;">
+     <img src="Projection.png" alt="Projection overhead" style="width: 80%;">
+   </div>
+ </div>
+
+ <div class="section-content" style="display: flex;">
+<table>
+  <tr>
+    <td style="background-color: #D3D3D480; border:none;">
+      <div>
+<h3 style="font-weight: normal; font-size: 1.5em;  padding-left: 30px;">The following configuration defines the spatial arrangement and dimensions for the projection setup, providing the necessary measurements to ensure the correct positioning and alignment of the screens and projectors.</h3>
+      </div>
+    </td>
+  </tr>
+</table>
+
+   <div class="text-container" style="flex: 1;">
+     <details>
+       <summary style="color: red; font-weight: bold;">Projection Setup Configuration</summary>
+       <table>
+  	<tr>
+   	 <td>Width of Screens 1 and 2 (w1, w2):</td>
+   	 <td>95 centimeters</td>
+  	</tr>
+  	<tr>
+  	  <td>Distance between Projectors and Screen (d):</td>
+  	  <td>1.5 meters</td>
+ 	 </tr>
+ 	 <tr>
+ 	   <td>Overlap Calculation:</td>
+  	  <td>20 centimeters</td>
+ 	 </tr>
+ 	 <tr>
+  	  <td>Vertical Length of Screens:</td>
+ 	   <td>60 centimeters</td>
+ 	 </tr>
+ 	 <tr>
+   	 <td>The total screen width is:</td>
+    	<td>1.7 meters</td>
+ 	 </tr>
+	</table>
+     </details>
+   </div>
+ </div>
+	<div class="section-content" style="display: flex; justify-content: flex-start;">
+
+<h1>3. Formulas:</h1>
+  <div class="text-container" style="flex: 1;">
+<h2>Mask Creation</h2>
+
+<table>
+       <tr>
+         <td>
+           <b>Description:</b>
+         </td>
+         <td>
+           Mask creation is a fundamental process within image synthesis technology, primarily used to generate a mask that defines the shape and transparency of the projected images. This crucial mask controls the blending and presentation of images on a flat screen, ensuring a seamless and continuous display.
+
+         </td>
+       </tr>
+	<tr>
+         <td>
+           <b>Formula:</b>
+         </td>
+	 <td>
+            <p>\f[ MS = \frac{OW}{IW}\cdot IS\f]</p>
+         </td>
+	 
+       </tr>
+     </table>
+ <details>
+    <summary style="color: red; font-weight: bold;">Mask Variables</summary>
+    <table>
+      <tr>
+        <td>Mask shape:</td>
+        <td>MS</td>
+      </tr>
+      <tr>
+        <td>Overlap width:</td>
+        <td>OW</td>
+      </tr>
+      <tr>
+        <td>Image width:</td>
+        <td>IW</td>
+      </tr>
+      <tr>
+        <td>Image shape:</td>
+        <td>IS</td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+  <div class="text-container" style="flex: 1;">
+  <h2>Gamma correction</h2>
+
+     <table>
+       <tr>
+         <td>
+           <b>Description:</b>
+         </td>
+         <td>
+           Gamma Correction is a method used to adjust the brightness and contrast of an image. It involves manipulating the pixel values to achieve a more visually optimized image by altering its luminance and color distribution.
+         </td>
+       </tr>
+	<tr>
+         <td>
+           <b>Formula:</b>
+         </td>
+	 <td>
+            <p>\f[ CP = \left(\frac{OP}{255}\right)^{\gamma} \cdot 255 \f]</p>
+
+         </td>
+       </tr>
+     </table>
+	<div class="text-container" style="flex: 1;">
+  <details>
+    <summary style="color: red; font-weight: bold;">Gamma Correction Variables</summary>
+    <table>
+      <tr>
+        <td>Corrected Pixel:</td>
+        <td>CP</td>
+      </tr>
+      <tr>
+        <td>Original Pixel:</td>
+        <td>OP</td>
+      </tr>
+      <tr>
+        <td>Gamma:</td>
+        <td>\f[{\gamma}\f]</td>
+      </tr>
+    </table>
+  </details>
+</div>
+<div class="text-container" style="flex: 1;">
+
+<h2>Alpha blending</h2>
+<table>
+       <tr>
+         <td>
+           <b>Description:</b>
+         </td>
+         <td>
+           The Alpha Blending technique, implemented in the code, is used to combine two images, typically from different sources or angles, in a smooth and gradual manner. It involves the manipulation of transparency levels for each pixel in the images to create a seamless transition effect when overlaying one image over another.
+         </td>
+       </tr>
+	<tr>
+         <td>
+           <b>Formula:</b>
+         </td>
+	 <td>
+            <p> For left: \f[  R = (1 - \alpha) \cdot CL + \alpha \cdot RL \f]     For right: \f[  R = CR + \alpha \cdot RR \cdot (1 - \alpha)  \f]</p>
+         </td>
+	 
+       </tr>
+     </table>
+  <details>
+    <summary style="color: red; font-weight: bold;">Alpha blending variables</summary>
+    <table>
+      <tr>
+        <td>Result:</td>
+        <td>R</td>
+      </tr>
+      <tr>
+        <td>Gamma Corrected Left:</td>
+        <td>CL</td>
+      </tr>
+      <tr>
+        <td>Result Left Image:</td>
+        <td>RL</td>
+      </tr>
+      <tr>
+        <td>Gamma Corrected Right:</td>
+        <td>CR</td>
+      </tr>
+      <tr>
+        <td>Result Right Image:</td>
+        <td>RR</td>
+      </tr>
+    </table>
+  </details>
+
+</div>
+<div class="text-container" style="flex: 1;">
+
+<h2>Intensity modifier</h2>
+<table>
+       <tr>
+         <td>
+           <b>Description:</b>
+         </td>
+         <td>
+           The Intensity Modifier plays a critical role in creating smooth transitions and blending effects in the final image, ensuring that the overlay of two images appears seamless and visually pleasing. It controls the pixel intensity based on the image side and position within the mask.
+         </td>
+       </tr>
+	<tr>
+         <td>
+           <b>Formula:</b>
+         </td>
+	 <td>
+            <p> For left: \f[  IF = 1.0 - \frac{mask - col}{mask} \f]     For right: \f[  IF = 1.0 - \frac{col}{mask} \f]</p>
+         </td>
+	 
+       </tr>
+     </table>
+  <details>
+    <summary style="color: red; font-weight: bold;">Alpha blending variables</summary>
+    <table>
+      <tr>
+        <td>Intensity factor</td>
+        <td>IF</td>
+      </tr>
+      <tr>
+        <td>Image shape</td>
+        <td>col</td>
+      </tr>
+      <tr>
+        <td>Mask shape</td>
+        <td>mask</td>
+      </tr>
+    </table>
+  </details>
+
+</div>
+
+</div>
+
+     
+</div>
+
+
+
+</div>
+<h1>4. Results:</h1>
+
+   <h2>Step 1: Image masking and stitching</h2>
+   <div class="images-container" style="display: flex;">
+     <div class="image-container" style="flex: 1;">
+       <img src="Stitch_normal.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+     <div class="image-container" style="flex: 1;">
+       <img src="Stitch_graph.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+     <div class="image-container" style="flex: 1;">
+       <img src="Stitch_test.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+   </div>
+
+   <h2>Step 2: Gamma correction</h2>
+   <div class="images-container" style="display: flex;">
+     <div class="image-container" style="flex: 1;">
+       <img src="Step_left_graph.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+     <div class="image-container" style="flex: 1;">
+       <img src="Step_left_graph 2.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+     <div class="image-container" style="flex: 1;">
+       <img src="Step_test.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+   </div>
+
+   <h2>Final Step: Alpha blending and intensity modifier</h2>
+   <div class="images-container" style="display: flex;">
+     <div class="image-container" style="flex: 1;">
+       <img src="Linear_graph.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+     <div class="image-container" style="flex: 1;">
+       <img src="Linear_test.jpg" alt="Projection overhead" style="width: 80%;">
+     </div>
+   </div>
+
+
+ */

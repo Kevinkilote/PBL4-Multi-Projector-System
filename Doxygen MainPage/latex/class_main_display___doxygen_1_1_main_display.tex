@@ -1,0 +1,100 @@
+\doxysection{Main\+Display\+\_\+\+Doxygen.\+Main\+Display Class Reference}
+\hypertarget{class_main_display___doxygen_1_1_main_display}{}\label{class_main_display___doxygen_1_1_main_display}\index{MainDisplay\_Doxygen.MainDisplay@{MainDisplay\_Doxygen.MainDisplay}}
+
+
+This class represents the main display functionality for projecting images.  
+
+
+Inheritance diagram for Main\+Display\+\_\+\+Doxygen.\+Main\+Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_display___doxygen_1_1_main_display}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_display___doxygen_1_1_main_display_a814173fc2de3bdddc017fd8ce926b583}\label{class_main_display___doxygen_1_1_main_display_a814173fc2de3bdddc017fd8ce926b583} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructor initializes the Main\+Display with necessary values for its function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_display___doxygen_1_1_main_display_afac6555dc498289994b061168fc1af39}{load\+Images}} (self, image\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Loads the image file from its image path/name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_display___doxygen_1_1_main_display_a9cc4edcc8d7f8abe03ae4dd192e375d4}{initialize\+Image}} (self, image)
+\begin{DoxyCompactList}\small\item\em Initializes the result image to be processed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_display___doxygen_1_1_main_display_a8342d1b6f1117409ce305ff58baf74ec}{save\+Image}} (self, image, image\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Save the processed result image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_main_display___doxygen_1_1_main_display_a54332af1c1d5b581268826480c5e43c9}\label{class_main_display___doxygen_1_1_main_display_a54332af1c1d5b581268826480c5e43c9} 
+{\bfseries result\+\_\+image}
+\begin{DoxyCompactList}\small\item\em This variable wil store the image that will be displayed in the main.\+py file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the main display functionality for projecting images. 
+
+It uses cv2 library to read and load images 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_display___doxygen_1_1_main_display_a9cc4edcc8d7f8abe03ae4dd192e375d4}\label{class_main_display___doxygen_1_1_main_display_a9cc4edcc8d7f8abe03ae4dd192e375d4} 
+\index{MainDisplay\_Doxygen.MainDisplay@{MainDisplay\_Doxygen.MainDisplay}!initializeImage@{initializeImage}}
+\index{initializeImage@{initializeImage}!MainDisplay\_Doxygen.MainDisplay@{MainDisplay\_Doxygen.MainDisplay}}
+\doxysubsubsection{\texorpdfstring{initializeImage()}{initializeImage()}}
+{\footnotesize\ttfamily Main\+Display\+\_\+\+Doxygen.\+Main\+Display.\+initialize\+Image (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image }\end{DoxyParamCaption})}
+
+
+
+Initializes the result image to be processed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image} & Loaded image to be processed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result\+\_\+image\+: Copy of the loaded image
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+result\+\_\+image will used as the base of the final processed image 
+\end{DoxyNote}
+\Hypertarget{class_main_display___doxygen_1_1_main_display_afac6555dc498289994b061168fc1af39}\label{class_main_display___doxygen_1_1_main_display_afac6555dc498289994b061168fc1af39} 
+\index{MainDisplay\_Doxygen.MainDisplay@{MainDisplay\_Doxygen.MainDisplay}!loadImages@{loadImages}}
+\index{loadImages@{loadImages}!MainDisplay\_Doxygen.MainDisplay@{MainDisplay\_Doxygen.MainDisplay}}
+\doxysubsubsection{\texorpdfstring{loadImages()}{loadImages()}}
+{\footnotesize\ttfamily Main\+Display\+\_\+\+Doxygen.\+Main\+Display.\+load\+Images (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Loads the image file from its image path/name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image} & path\+: Path/name of the image to be read to load the images to the main file for processing\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+image\+: Loaded image from the image path/name 
+\end{DoxyReturn}
+\Hypertarget{class_main_display___doxygen_1_1_main_display_a8342d1b6f1117409ce305ff58baf74ec}\label{class_main_display___doxygen_1_1_main_display_a8342d1b6f1117409ce305ff58baf74ec} 
+\index{MainDisplay\_Doxygen.MainDisplay@{MainDisplay\_Doxygen.MainDisplay}!saveImage@{saveImage}}
+\index{saveImage@{saveImage}!MainDisplay\_Doxygen.MainDisplay@{MainDisplay\_Doxygen.MainDisplay}}
+\doxysubsubsection{\texorpdfstring{saveImage()}{saveImage()}}
+{\footnotesize\ttfamily Main\+Display\+\_\+\+Doxygen.\+Main\+Display.\+save\+Image (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image,  }\item[{}]{image\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Save the processed result image. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image} & The final proessed image that is ready to be projected\\
+\hline
+\mbox{\texttt{ in}}  & {\em image\+\_\+name} & The name that the image will be saved as \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Main\+Display\+\_\+\+Doxygen.\+py\end{DoxyCompactItemize}
